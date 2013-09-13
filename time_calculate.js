@@ -10,7 +10,7 @@ function calculate_time() {
 	
 	$("#myLogList_dgLogList tr.Header0").append('<td>Day Total</td><td>Week Total</td><td>Week Remain</td>')
 	
-	$("#myLogList_dgLogList tr.Text0").each(function() {
+	$("#myLogList_dgLogList tr.Text0").reverse().each(function() {
 		var date = new Date($($(this).children('td')[0]).text());
 		var login_time = new Date($($(this).children('td')[1]).text());
 		var logout_time = new Date($($(this).children('td')[2]).text());
@@ -25,7 +25,7 @@ function calculate_time() {
 			$(this).append('<td>' + (40 - sum).toPrecision(3) + '</td>');
 			
 			
-			if (date.getDay() == 1) {
+			if (date.getDay() == 5) {
 				sum = 0;
 			} 
 		} else {
