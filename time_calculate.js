@@ -14,10 +14,14 @@ function calculate_time() {
 		var date = new Date($($(this).children('td')[0]).text());
 		var login_time = new Date($($(this).children('td')[1]).text());
 		var logout_time = new Date($($(this).children('td')[2]).text());
+		
+		
+		if (date.getDay() == 1) {
+				sum = 0;
+		}
+		
 		if (!isNaN(login_time) && !isNaN(logout_time)) {
 			var working_time = (logout_time - login_time) / 1000 / 60 / 60 - 1
-			
-			
 
 			$(this).append('<td>' + working_time.toPrecision(3) + '</td>')
 			sum += working_time;
@@ -25,12 +29,11 @@ function calculate_time() {
 			$(this).append('<td>' + (40 - sum).toPrecision(3) + '</td>');
 			
 			
-			if (date.getDay() == 5) {
-				sum = 0;
-			} 
+			 
 		} else {
 			$(this).append('<td></td><td></td><td></td>');
 		}
+		
 	})
 }
 
