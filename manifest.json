@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+
+  "name": "Objectiva Working Time Calculator",
+  "description": "This extension can calculate your weekly working hours",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://gold/attendance/"],
+      "js": ["events.js"]
+    }
+  ]
+}
