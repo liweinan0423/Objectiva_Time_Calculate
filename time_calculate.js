@@ -8,7 +8,7 @@ document.body.appendChild(el);
 function calculate_time() {
 	var sum = 0;
 	
-	$("#myLogList_dgLogList tr.Header0").append('<td>Day Total</td><td>Week Total</td><td>Week Remain</td>')
+	$("#myLogList_dgLogList tr.Header0").append('<td>Day Total</td><td>Week Total</td><td>Week Remaining</td>')
 	
 	$($("#myLogList_dgLogList tr.Text0").get().reverse()).each(function() {
 		var date = new Date($($(this).children('td')[0]).text());

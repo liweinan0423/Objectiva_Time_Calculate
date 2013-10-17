@@ -6,7 +6,7 @@
   "version": "1.0",
   "content_scripts": [
     {
-      "matches": ["http://gold/attendance/"],
+      "matches": ["http://gold/attendance/*"],
       "js": ["events.js"]
     }
   ]
