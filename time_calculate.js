@@ -1,4 +1,5 @@
 el = document.createElement('script');
+el.type="text/javascript";
 el.src = 'http://code.jquery.com/jquery-1.10.2.min.js';
 el.onload = calculate_time
 
