@@ -1,5 +1,4 @@
-Objectiva_Time_Calculate
-========================
+
 
 Calculate your work time every day and week.
 
